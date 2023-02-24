@@ -64,7 +64,4 @@ public class Alumno {
 	public void setCreateAt(Date createAt) {
 		this.createAt = createAt;
 	}
-	
-	
-
 }
