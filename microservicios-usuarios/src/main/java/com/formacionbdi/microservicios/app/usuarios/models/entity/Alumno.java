@@ -2,7 +2,8 @@ package com.formacionbdi.microservicios.app.usuarios.models.entity;
 
 import java.util.Date;
 
-import jakarta.persistence.*;
+//import jakarta.persistence.*;
+import javax.persistence.*;
 
 @Entity
 @Table(name = "alumnos")
