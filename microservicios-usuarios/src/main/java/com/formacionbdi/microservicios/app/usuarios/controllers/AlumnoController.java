@@ -49,7 +49,7 @@ public class AlumnoController {
     }
 
     @DeleteMapping("/{id}")
-    public ResponseEntity eliminar(@PathVariable Long id){
+    public ResponseEntity<?> eliminar(@PathVariable Long id){
         service.deleteById(id);
         return ResponseEntity.noContent().build();
     }
