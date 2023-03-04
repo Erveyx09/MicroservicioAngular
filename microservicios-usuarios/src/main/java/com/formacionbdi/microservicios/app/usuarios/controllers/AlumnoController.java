@@ -24,7 +24,7 @@ public class AlumnoController {
     @GetMapping("/{id}")
     public ResponseEntity<?> ver(@PathVariable Long id){
         Optional<Alumno> o = service.findById(id);
-        if (o.isEmpty()){
+        if (!o.isPresent()){
             return ResponseEntity.notFound().build();
         }
         return ResponseEntity.ok(o.get());
@@ -39,7 +39,7 @@ public class AlumnoController {
     @PutMapping("/{id}")
     public ResponseEntity<?> editar (@RequestBody Alumno alumno, @PathVariable Long id){
         Optional<Alumno> o = service.findById(id);
-        if (o.isEmpty()){
+        if (!o.isPresent()){
             return ResponseEntity.notFound().build();
         }
         Alumno alumnoDb = o.get();
